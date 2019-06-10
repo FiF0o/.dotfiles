@@ -26,8 +26,6 @@ echo '... python dependencies installed'
 echo '\n'
 echo '...Installing ruby dependencies 💎'
 brew install rbenv
-# echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
-# source ~/.zshrc
 brew install cmake
 sudo gem install bundler
 echo '💎 dependencies installed'

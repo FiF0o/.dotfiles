@@ -1,0 +1,28 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons",
+    "files.autoSave": "onFocusChange",
+    "editor.tabSize": 2,
+    "gitlens.keymap": "alternate",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "terminal.integrated.rendererType": "dom",
+    "[elm]": {
+        "editor.formatOnSave": true
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path": "/Users/jonlazarini/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.draft-path": "/Users/jonlazarini/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+        "vs-kubernetes.minikube-path": "/Users/jonlazarini/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    }
+}

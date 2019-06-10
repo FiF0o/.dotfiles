@@ -1,0 +1,7 @@
+*.password
+*.ssh
+*.env
+.Trash
+.DS_Store
+# git init -> git/
+.cfg/
