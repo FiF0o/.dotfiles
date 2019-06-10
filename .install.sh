@@ -3,8 +3,6 @@
 cd ~
 pwd
 
-sudo chown -R $(whoami):admin /usr/local/* && sudo chmod -R g+rwx /usr/local/*
-
 echo '\n'
 echo 'Installing Brew... ☕️'
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -19,7 +17,7 @@ echo 'Brew installed'
 ./.install-softwares.sh
 ./.install-dotfiles.sh
 
-# TODO add .env to be sources
+# TODO add .env to be sourced
 # ./.env.*
 
 echo '\n\n'
