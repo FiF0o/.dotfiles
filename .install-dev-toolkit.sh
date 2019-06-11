@@ -37,5 +37,6 @@ echo '\n'
 echo '...Installing dev tools'
 brew cask install iterm2
 brew cask install visual-studio-code
-  
+brew install elm
+brew install elm-format
 echo '...dev tools installed'
