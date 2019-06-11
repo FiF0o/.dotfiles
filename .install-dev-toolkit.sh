@@ -27,6 +27,9 @@ echo '\n'
 echo '...Installing ruby dependencies 💎'
 brew install rbenv
 brew install cmake
+rbenv install 2.3.0
+rbenv global 2.3.0
+gem env home
 sudo gem install bundler
 echo '💎 dependencies installed'
 
