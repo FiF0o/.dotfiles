@@ -24,5 +24,7 @@
         "vs-kubernetes.helm-path": "/Users/jonlazarini/.vs-kubernetes/tools/helm/darwin-amd64/helm",
         "vs-kubernetes.draft-path": "/Users/jonlazarini/.vs-kubernetes/tools/draft/darwin-amd64/draft",
         "vs-kubernetes.minikube-path": "/Users/jonlazarini/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-    }
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
