@@ -13,3 +13,4 @@ code --install-extension sbrink.elm
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension VisualStudioExptTeam.vscodeintellicod
 code --install-extension vscode-icons-team.vscode-icons
+code --install-extension VisualStudioExptTeam.vscodeintellicode
