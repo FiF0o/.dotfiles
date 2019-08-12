@@ -7,6 +7,8 @@ brew cask install whatsapp
 brew cask install google-chrome
 brew cask install charles
 brew cask install arduino
+# used for ps2pdf to alter pdf reso instead of Acrobat
+brew install ghostscript
 
 ### TODO softwares without brew formulae :(
 # Adobe

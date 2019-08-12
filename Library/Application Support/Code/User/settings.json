@@ -26,5 +26,6 @@
         "vs-kubernetes.minikube-path": "/Users/jonlazarini/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
     },
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vsicons.projectDetection.autoReload": true
 }
