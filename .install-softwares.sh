@@ -30,4 +30,11 @@ brew install ghostscript
 # xSort.app
 # zoom.us.app
 
+# install react-native-cli things
+# android studio: https://facebook.github.io/react-native/docs/0.60/getting-started
+npm install -g react-native-cli
+brew install watchman
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk8
+
 echo '... Apps installation finished'
