@@ -7,6 +7,7 @@ brew cask install whatsapp
 brew cask install google-chrome
 brew cask install charles
 brew cask install arduino
+brew cask install virtualbox
 # used for ps2pdf to alter pdf reso instead of Acrobat
 brew install ghostscript
 # used for converting videos, mp4 -> avi
