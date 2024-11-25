@@ -1,6 +1,3 @@
-#!/usr/bin/env zsh
-
-
 # ./fonts.sh; install_dependencies
 function install_dependencies()
 {
@@ -9,4 +6,4 @@ function install_dependencies()
     echo "fonts done ✅"
 }
 
-# install_dependencies;
+install_dependencies;

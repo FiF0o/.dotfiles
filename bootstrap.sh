@@ -1,6 +1,13 @@
-#!/usr/bin/env zsh
-
+#!/usr/bin/env bash
 echo "Bootstraping dotfiles..."
+
+# Install vim solarized
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle && git clone https://github.com/altercation/vim-colors-solarized.git && mv vim-colors-solarized ~/.vim/bundle  && cd ~
+mkdir -p ~/.vim/swaps
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/undo
 
 echo "set permissions to execute files"
 chmod -R +rwx ~/.dotfiles
@@ -14,13 +21,6 @@ mydotfiles=(
     # create aliaes for git bare repo
     # .macos
 )
-
-# TODO: 
-# Create dotfiles to be migrated to new machine
-# git init --bare $HOME/.dotfiles
-# alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME/.dotfiles/'
-# dotfiles config status.showUntrackedFiles no
-# git clone --separate-git-dir=~/.toto git@github.com:FiF0o/.dotfiles.git
 
 ssh-keygen -t rsa -b 4096 -C "lazarini.jonathan.com" -f ~/.ssh/jonlazarini_personal -P ""
 # ssh agent adds key for authenticating to GH 

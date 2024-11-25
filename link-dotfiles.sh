@@ -1,8 +1,6 @@
-#!/usr/bin/env zsh
-
 cd ~
 mkdir Development
-mkdir ~/Development/work                                                                      ✔  843  16:12:35
+mkdir ~/Development/work
 mkdir ~/Development/personal
 mkdir -p ~/.ssh
 
@@ -15,6 +13,8 @@ ln -s ~/.dotfiles/.aliases              ~/.aliases
 ln -s ~/.dotfiles/.zshenv               ~/.zshenv
 ln -s ~/.dotfiles/.zlogin               ~/.zlogin
 
+ln -s ~/.dotfiles/.vimrc                ~/.vimrc
+
 ln -s ~/.dotfiles/.gitconfig            ~/.gitconfig
 ln -s ~/.dotfiles/.gitignore            ~/.gitignore
 ln -s ~/.dotfiles/.gitconfig.work       ~/.gitconfig.work
@@ -22,7 +22,8 @@ ln -s ~/.dotfiles/.gitconfig.personal   ~/.gitconfig.personal
 ln -s ~/.dotfiles/.gitconfig-local      ~/.gitconfig-local
 
 ln -s ~/.dotfiles/.editorconfig         ~/.editorconfig
-
+# vscode global config
+cp ~/.dotfiles/configurations/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 ###########################################################
 ##                     Mac Config                        ##

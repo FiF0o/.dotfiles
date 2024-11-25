@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -62,22 +62,21 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-source $ZSH/oh-my-zsh.sh
 
-plugins=(
-    git
-)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -89,13 +88,19 @@ plugins=(
 
 
 # Example aliases
-alias zshconfig="code ~/dotfiles/.zshrc"
-alias ohmyzsh="code ~/dotfiles/.oh-my-zsh"
+alias zshconfig='code ~/dotfiles/.zshrc'
+alias ohmyzsh='code ~/dotfiles/.oh-my-zsh'
 
 
 #### TODO
 ## Alias to push change
-# alias config='/usr/bin/git --git-dir=/Users/jonlazarini/.dotfiles/ --work-tree=/Users/jonlazarini'
+alias config='/usr/bin/git --git-dir=/Users/jonlazarini/.dotfiles/ --work-tree=/Users/jonlazarini'
 
 source ~/.aliases
 source ~/.functions
+
+# Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
