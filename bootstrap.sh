@@ -5,34 +5,52 @@ echo "Bootstraping dotfiles..."
 echo "set permissions to execute files"
 chmod -R +rwx ~/.dotfiles
 
+
+# Setting up bare repository to checkout config
+# Create dotfiles to be migrated to new machine
+# https://www.atlassian.com/git/tutorials/dotfiles
+
+git clone --bare git@github.com:FiF0o/.dotfiles.git $HOME/.dotfiles
+
+function config {
+   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+}
+
+config checkout
+if [ $? = 0 ]; then
+  echo "Checked out config.";
+  else
+    echo "Backing up pre-existing dot files.";
+    mkdir -p .config-backup
+    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+    config checkout
+fi;
+config config status.showUntrackedFiles no
+
+
 mydotfiles=(
     fonts.sh
     brew.sh
-    # download dotfiles
     install-terminal.sh
     link-dotfiles.sh
-    # create aliaes for git bare repo
-    # .macos
+    .macos
 )
 
-# TODO: 
-# Create dotfiles to be migrated to new machine
-# git init --bare $HOME/.dotfiles
-# alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME/.dotfiles/'
-# dotfiles config status.showUntrackedFiles no
-# git clone --separate-git-dir=~/.toto git@github.com:FiF0o/.dotfiles.git
 
-ssh-keygen -t rsa -b 4096 -C "lazarini.jonathan.com" -f ~/.ssh/jonlazarini_personal -P ""
-# ssh agent adds key for authenticating to GH 
-ssh-add ~/.ssh/jonlazarini_personal
-# https://stackoverflow.com/questions/26505980/github-permission-denied-ssh-add-agent-has-no-identities
+function set_ssh_key()
+{
+    ssh-keygen -t rsa -b 4096 -C "lazarini.jonathan.com" -f ~/.ssh/jonlazarini_personal -P ""
+    # ssh agent adds key for authenticating to GH 
+    ssh-add ~/.ssh/jonlazarini_personal
+    # https://stackoverflow.com/questions/26505980/ github-permission-denied-ssh-add-agent-has-no-identities
 
-# verify auth
-ssh -vT git@github.com
-echo 'copying key to clipboard & opening key settings on GH'
-pbcopy <  ~/.ssh/jonlazarini_personal.pub
-open https://github.com/settings/ssh/new
-
+    # verify auth
+    ssh -vT git@github.com
+    echo 'copying key to clipboard & opening key settings on GH'
+    pbcopy <  ~/.ssh/jonlazarini_personal.pub
+    open https://github.com/settings/ssh/new
+}
+set_ssh_key
 
 for script in $mydotfiles; do
     # Check if it's a regular file

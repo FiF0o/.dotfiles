@@ -8,9 +8,6 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# Git bare repo git alias for .dotfiles, use to track and commit changes.
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 # Shortcuts
 alias db="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"

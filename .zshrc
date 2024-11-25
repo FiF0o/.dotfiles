@@ -92,10 +92,8 @@ fi
 alias zshconfig="code ~/dotfiles/.zshrc"
 alias ohmyzsh="code ~/dotfiles/.oh-my-zsh"
 
-
-#### TODO
-## Alias to push change
-# alias config='/usr/bin/git --git-dir=/Users/jonlazarini/.dotfiles/ --work-tree=/Users/jonlazarini'
+# Git bare repo git alias for .dotfiles, use to track and commit changes.
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 source ~/.aliases
 

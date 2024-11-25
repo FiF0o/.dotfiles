@@ -3,5 +3,5 @@
 *.env
 .Trash
 .DS_Store
-# .dotfiles
+.dotfiles
 *.*_history
