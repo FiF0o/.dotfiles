@@ -73,11 +73,11 @@ plugins=(
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -98,4 +98,11 @@ alias ohmyzsh="code ~/dotfiles/.oh-my-zsh"
 # alias config='/usr/bin/git --git-dir=/Users/jonlazarini/.dotfiles/ --work-tree=/Users/jonlazarini'
 
 source ~/.aliases
+
 source ~/.functions
+
+# Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases

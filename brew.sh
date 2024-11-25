@@ -1,6 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-# ./fonts.sh; brew_dependencies
+# ./brew.sh; brew_dependencies
 function brew_dependencies()
 {
     echo "installing brew dependencies...."
@@ -21,4 +21,4 @@ function brew_dependencies()
     brew list --full-name
 }
 
-# brew_dependencies
+brew_dependencies;

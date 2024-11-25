@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # ./install-terminal.sh; set_terminal
 function set_terminal()
@@ -13,4 +13,4 @@ function set_terminal()
     echo "Your 🐚 is: $SHELL; with version: $(zsh --version)"
 }
 
-# set_terminal;
+set_terminal;

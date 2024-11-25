@@ -1,6 +1,13 @@
-#!/usr/bin/env zsh
-
+#!/usr/bin/env bash
 echo "Bootstraping dotfiles..."
+
+# Install vim solarized
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle && git clone https://github.com/altercation/vim-colors-solarized.git && mv vim-colors-solarized ~/.vim/bundle  && cd ~
+mkdir -p ~/.vim/swaps
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/undo
 
 echo "set permissions to execute files"
 chmod -R +rwx ~/.dotfiles

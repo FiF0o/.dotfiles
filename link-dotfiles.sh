@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 cd ~
 mkdir Development
-mkdir ~/Development/work                                                                      ✔  843  16:12:35
+mkdir ~/Development/work
 mkdir ~/Development/personal
 mkdir -p ~/.ssh
 
@@ -14,6 +14,8 @@ ln -s ~/.dotfiles/.functions            ~/.functions
 ln -s ~/.dotfiles/.aliases              ~/.aliases
 ln -s ~/.dotfiles/.zshenv               ~/.zshenv
 ln -s ~/.dotfiles/.zlogin               ~/.zlogin
+
+ln -s ~/.dotfiles/.vimrc                ~/.vimrc
 
 ln -s ~/.dotfiles/.gitconfig            ~/.gitconfig
 ln -s ~/.dotfiles/.gitignore            ~/.gitignore
